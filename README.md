@@ -27,3 +27,10 @@ Eshell V5.9.1  (abort with ^G)
 {ok,{{12.12890625,12.3046875},{12.3046875,12.65625}}}
 8> 
 ```
+
+Compile geohash_nif
+```
+#!/bin/env bash
+ERL_ROOT="/usr/local/lib/erlang"
+gcc -fPIC -shared -o geohash_nif.so geohash.c -I $ERL_ROOT/usr/include/
+```
